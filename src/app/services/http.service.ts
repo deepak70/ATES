@@ -30,7 +30,6 @@ export class HttpService {
 
   setToken() {
     this.token = "Bearer "+window.sessionStorage.getItem('token') as string | string[];
-    console.log("token "+this.token);
     this.headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: this.token
