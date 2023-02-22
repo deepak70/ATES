@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "data": {
+        "departmentVMS": [
+            {
+                "id": 1,
+                "department": "MCA"
+            },
+            {
+                "id": 2,
+                "department": "MBA"
+            }
+        ]
+    },
+    "message": null
+}

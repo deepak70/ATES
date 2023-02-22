@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "data": {
+        "classVM": [
+            {
+                "id": 1,
+                "className": "MCA-I"
+            },
+            {
+                "id": 2,
+                "className": "MBA-I"
+            },
+            {
+                "id": 3,
+                "className": "MCA-II"
+            },
+            {
+                "id": 4,
+                "className": "MBA-II"
+            }
+        ]
+    },
+    "message": null
+}

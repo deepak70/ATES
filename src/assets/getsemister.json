@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "data": {
+        "semisters": [
+            {
+                "semisterId": 1,
+                "semister": "SEM-I"
+            },
+            {
+                "semisterId": 2,
+                "semister": "SEM-II"
+            },
+            {
+                "semisterId": 3,
+                "semister": "SEM-III"
+            },
+            {
+                "semisterId": 4,
+                "semister": "SEM-IV"
+            }
+        ]
+    },
+    "message": null
+}

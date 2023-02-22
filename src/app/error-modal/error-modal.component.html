@@ -1,0 +1,17 @@
+<div [ngStyle]="{'display':modal.display}" class="modal" id="myModal">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{modal.heading}}</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="close()"></button>
+            </div>
+            <div class="modal-body">
+                {{modal.body}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" [class]="modal.btnClass" data-bs-dismiss="modal" (click)="close()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

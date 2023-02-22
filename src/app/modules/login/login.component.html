@@ -1,0 +1,13 @@
+<div class="login-container">
+  <div class="google-login-text">
+    <p class="text-primary text-center">Please login using your Google / Gmail Account to fill the online feedback form.
+    </p>
+  </div>
+  <div class="btn-container">
+    <asl-google-signin-button id="g-btn" class="g-btn" type='standard' text="signin_with" theme="filled_blue"
+      size='large'>Google Login</asl-google-signin-button>
+  </div>
+  <div *ngIf="isError">
+    <app-error-modal [modal]="modal"></app-error-modal>
+  </div>
+</div>

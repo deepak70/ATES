@@ -1,0 +1,51 @@
+<app-logout></app-logout>
+<div class="dte-container">
+    <div class="radio-group">
+        <div class="form-check">
+            <input type="radio" id="r1" name="userType" [value]="userTypes.STUDENT_ABOUT_INSTITUTE"
+                class="form-check-input" checked (change)="setUserType($event)" />
+            <label class="form-check-label" for="r1">{{userTypes.STUDENT_ABOUT_INSTITUTE}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r2" name="userType" [value]="userTypes.STUDENT_ABOUT_TEACHER"
+                class="form-check-input" (change)="setUserType($event)" />
+            <label class="form-check-label" for="r2">{{userTypes.STUDENT_ABOUT_TEACHER}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r3" name="userType" [value]="userTypes.TEACHER_EMPLOYEE_ABOUT_INSTITUTE"
+                class="form-check-input" (change)="setUserType($event)" />
+            <label class="form-check-label" for="r3">{{userTypes.TEACHER_EMPLOYEE_ABOUT_INSTITUTE}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r4" name="userType" [value]="userTypes.TEACHER" class="form-check-input"
+                (change)="setUserType($event)" />
+            <label class="form-check-label" for="r4">{{userTypes.TEACHER}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r5" name="userType" [value]="userTypes.PARENT" class="form-check-input"
+                (change)="setUserType($event)" />
+            <label class="form-check-label" for="r5">{{userTypes.PARENT}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r6" name="userType" [value]="userTypes.ALUMNI" class="form-check-input"
+                (change)="setUserType($event)" />
+            <label class="form-check-label" for="r6">{{userTypes.ALUMNI}}</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="r7" name="userType" [value]="userTypes.EMPLOYER" class="form-check-input"
+                (change)="setUserType($event)" />
+            <label class="form-check-label" for="r7">{{userTypes.EMPLOYER}}</label>
+        </div>
+    </div>
+    <div class="container dte-form-container">
+        <div class="input-group mb-3 w-50">
+            <input type="text" #eligibility class="form-control" (keyup)="setEligibilityNum(eligibility.value)"
+                placeholder="ENTER ELIGIBILITY NUMBER">
+            <button class="btn btn-primary" (click)="validateEligibilityNum($event)">Confirm Identity</button>
+        </div>
+
+    </div>
+</div>
+<div *ngIf="isError">
+    <app-error-modal [modal]="modal"></app-error-modal>
+</div>

@@ -1,0 +1,57 @@
+<app-logout></app-logout>
+
+<div class="user-form container">
+    <h4 class="text-center mb-4">USER INFORMATION</h4>
+    <form class="was-validated">
+        <div class="row mb-4">
+            <div class="col">
+                <input type="text" name="email" placeholder="EMAIL ADDRESS" class="form-control" [value]="userEmail"
+                    disabled />
+            </div>
+            <div class="col">
+                <input type="text" name="name" placeholder="STUDENT NAME" class="form-control" [value]="userName"
+                    disabled />
+            </div>
+        </div>
+        <div class="row mb-4" *ngIf="isShow1">
+            <div class="col">
+                <select name="department" id="department" [class]="deptFormSelectCSS" [value]="dept" #dept1
+                    (click)="setDept(dept1.value)" [(ngModel)]="selectedDept" required [disabled]="disableDept">
+                    <option *ngFor="let dept of departments; let i = index" [value]="departments[i].id">
+                        {{dept.department}}</option>
+                </select>
+            </div>
+            <div class="col">
+                <select name="class" id="class" [class]="classFormSelectCSS" [value]="classObj" #classObj1
+                    (click)="setClass(classObj1.value)" [(ngModel)]="selectedClass" required [disabled]="disableClass">
+                    <option *ngFor="let classObj of classes" [value]="classObj.id">{{classObj.className}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-4" *ngIf="isShow1 || !isShow2 || isShow3">
+            <div class="col" *ngIf="isShow1">
+                <select name="semister" id="semister" [class]="semisterFormSelectCSS" [value]="semister" #semister
+                    (click)="setSemister(semister.value)" required>
+                    <option *ngFor="let semister of semisters" [value]="semister.semisterId">{{semister.semister}}
+                    </option>
+                </select>
+            </div>
+            <div class="col">
+                <select name="acadmicYear" id="acadmicYear" [class]="acadmicYearFormSelectCSS" [value]="acadmicYear"
+                    #acadmicYear (click)="setAcadmicYear(acadmicYear.value)" required>
+                    <option *ngFor="let acadmicYear of acadmicYears" [value]="acadmicYear.year">{{acadmicYear.year}}
+                    </option>
+                </select>
+            </div>
+            <div class="col" *ngIf="!isShow1"></div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button class="btn btn-primary px-5" (click)="submitStudInfo($event)">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div *ngIf="isError">
+    <app-error-modal [modal]="modal"></app-error-modal>
+</div>

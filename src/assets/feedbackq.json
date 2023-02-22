@@ -1,0 +1,62 @@
+{
+    "success": true,
+    "data": {
+        "feedbackQuestionVM": [
+            {
+                "questionId": 1,
+                "question": "How well did the teachers prepare for the classes? "
+            },
+            {
+                "questionId": 2,
+                "question": "How well were the teachers able to communicate?"
+            },
+            {
+                "questionId": 3,
+                "question": "The teacher's approach to teaching can best be described"
+            },
+            {
+                "questionId": 4,
+                "question": "Fairness of the internal evaluation process by the"
+            },
+            {
+                "questionId": 5,
+                "question": "Was your performance in assignments discussed with you?"
+            },
+            {
+                "questionId": 6,
+                "question": "The institute takes active interest in promoting internship, student exchange, field visit opportunities for students."
+            },
+            {
+                "questionId": 7,
+                "question": "The teaching and mentoring process in your institution facilitates you in cognitive, social and emotional growth"
+            },
+            {
+                "questionId": 8,
+                "question": "The institution provides multiple opportunities to learn and grow"
+            }
+        ],
+        "feedbackOptionVM": [
+            {
+                "optionId": 1,
+                "option": "Excellent"
+            },
+            {
+                "optionId": 2,
+                "option": "Very good"
+            },
+            {
+                "optionId": 3,
+                "option": "Good"
+            },
+            {
+                "optionId": 4,
+                "option": "Fair"
+            },
+            {
+                "optionId": 5,
+                "option": "Poor"
+            }
+        ]
+    },
+    "message": null
+}

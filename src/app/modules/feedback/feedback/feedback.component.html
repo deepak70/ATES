@@ -1,0 +1,26 @@
+<app-logout></app-logout>
+<div class="container mb-4">
+    <h4 class="text-center mb-4">FEEDBACK</h4>
+    <div class="quetion-container">
+        <div class="quetion" *ngFor="let question of data.data.feedbackQuestionVM; let i = index">
+            <input id="q{{i}}" name="q{{i}}" type="hidden" #qId [value]="question.questionId">
+            <p>{{i+1}}.{{question.question}}</p>
+            <div class="option-container">
+                <div class="form-check" *ngFor="let option of data.data.feedbackOptionVM">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="o{{i}}" [value]="option.optionId"
+                            (change)="setAnswer($event,qId.value)">{{option.option}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4 mt-4">
+        <div class="col text-center">
+            <button class="btn btn-primary px-5" (click)="submitFeedback($event)">Submit</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="isError">
+    <app-error-modal [modal]="modal"></app-error-modal>
+</div>
